@@ -1,0 +1,14 @@
+{
+  "name": "pedro__underg",
+  "version": "1.0.0",
+  "description": "Nodejs runtime environment with Pedro",
+  "main": "app.js",
+  "scripts": {
+    "test": "me",
+    "app":"nodemon app",
+    "tut":"nodemon tutorial",
+    "express":"nodemon express"
+  },
+  "author": "Jonas",
+  "license": "ISC"
+}
