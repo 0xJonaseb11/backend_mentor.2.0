@@ -54,16 +54,16 @@ app.get('/',(req,res) =>{//has only one route
   //we also have post request which is gonna get the data from a user */
   //We need to validate the data that we get within a request body,,this is where Joi comes in */
 
-  const Joi = require('Joi');
- const { result } = require('lodash');
+ const joi = require('joi');
+ const lodash = require('lodash');
 
  /*we are going to create a schema*/ //is ablue printof the data that we want to have
- const schema = Joi.object().keys({
-     email : Joi.string().trim().email().required(),
-     password : Joi.string().min(6).max(10).required()
+ const schema = joi.object().keys({
+     email :  joi.string().trim().email().required(),
+     password : joi.string().min(6).max(10).required()
  });
  /**validation of inputs */
- Joi.validate(req.body,schema,(err,result) =>{
+ joi.validate(req.body,schema,(err,result) =>{
      if(err){
          res.send('AN ERROR OCCURRED');
      }else{
@@ -89,27 +89,27 @@ app.get('/',(req,res) =>{//has only one route
 
 
  //PERSONALINFO SCHEMA
- const personalInfoSchema = Joi.object().keys({
-     streetAddress : Joi.string().trim().required(),
-     city : Joi.string().trim().required(),
-     state : Joi.string().trim().length(2).required()
+ const personalInfoSchema = joi.object().keys({
+     streetAddress : joi.string().trim().required(),
+     city : joi.string().trim().required(),
+     state : joi.string().trim().length(2).required()
 
  });
 
  ///PREFERENCES SCHEMA
 
  /**here we'll not use string method instead we use array method */
- const preferencesSchema = Joi.array().items(Joi.string());/*Joi.object()*/
+ const preferencesSchema = joi.array().items(joi.string());/*Joi.object()*/
     /*example: Joi.string().required(); */
  
     /**we'll try to relate schemas created */
- const schema_2 = Joi.object().keys({
+ const schema_2 = joi.object().keys({
      personalInfo : personalInfoSchema,
      preferences : preferencesSchema
 
  });
  /**Validation */
- Joi.validate(userInput,schema_2,(err,result) =>{
+ joi.validate(userInput,schema_2,(err,result) =>{
      if (err){ //WE use the built in schema(that contains all schemas)
          console.log(err);
      }else{

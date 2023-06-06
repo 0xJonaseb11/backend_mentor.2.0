@@ -1,0 +1,20 @@
+File created by fs.write file system method Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here 
+ by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here
+by fs.appendFile the file system method used to append a file
+ Continuation to the recently created file; triall.txt is right attached here
+by fs.appendFile the file system method used to append a file

@@ -31,9 +31,9 @@ console.log(tut);
   }
 
    let pedro = new Person('Pedro');
-   let bella = new Person('Bella');
-   bella.on('name',() =>{
-     console.log('Her name is ' + bella.name);
+   let jaz = new Person('az');
+   jaz.on('name',() =>{
+     console.log('His name is ' + jaz.name);
    });
   pedro.on('name',() =>{
      console.log('His name is ' + pedro.name);
@@ -41,7 +41,7 @@ console.log(tut);
 
    /**When you emit,code executes synhronously eg:*/
   pedro.emit('name');
-  bella.emit('name');
+  jaz.emit('name');
 
    /***READLINE MODULE */
    /**Used to get user input */
