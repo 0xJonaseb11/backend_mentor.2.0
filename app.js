@@ -1,12 +1,12 @@
 //NOTE : it is of high standard to put the used modules in one same position
 
- const tutorial = require('./tutorial');
-console.log(tutorial); 
+ const tut = require('./tutorial');
+console.log(tut); 
  /****Prints the properties of tutorial ***/
 
-  console.log(tutorial.sum(6,6));
- console.log(tutorial.PI);
-  console.log(new tutorial.SomeMathObj());
+  console.log(tut.sum(6,6));
+ console.log(tut.PI);
+  console.log(new tut.SomeMathObj());
   /***Prints the actual values assinged to the class and constructo
   /********EVENT MODULES AND EMITTERS***/
 
