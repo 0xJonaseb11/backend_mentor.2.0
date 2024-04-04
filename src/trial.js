@@ -326,6 +326,6 @@ trial_app.use((req, res, next) => {
 //Express router
 //helps us to separate our code in different files to be easy to manage
 
-const pple = require("./routes/pple");
+const pple = require("../routes/pple");
 trial_app.use("./pple", pple);
 trial_app.listen(6000);
