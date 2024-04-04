@@ -1,6 +1,3 @@
-const dotenv = require("dotenv");
-dotenv.config();
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -41,8 +38,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(() => {
-  console.log(`Our app is listening on http://localhost:${process.env.PORT || '3000'}`);
+app.listen(3000, () => {
+  console.log(`Our app is listening on port ${process.env.PORT || '300'}`)
 });
 
 module.exports = app;
