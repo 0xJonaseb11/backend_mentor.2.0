@@ -14,26 +14,28 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-    res.send("This is the home page")
+    // res.send("This is the home page")
+    res.send("Hello kevin")
     res.write("This is the body")
+    
 
 });
 
 
-app.all('/home/room', (req, res, next) => {
-    //middle function
-    next();
+// app.all('/home/room', (req, res, next) => {
+//     //middle function
+//     next();
 
-})
+// })
 
 app.get('/home/room', (req, res) =>{
     res.send("This is the room")
-    window.location.reload();
+    // window.location.reload();
 
-    setTimeout(() => {
-        window.location.reload()
+//     setTimeout(() => {
+//         // window.location.reload()
 
-})
+// })
 
 app.get('/home/room/:id', (req, res) =>{
     res.send("Data on id 123", req.params.id);
@@ -51,7 +53,7 @@ app.post('/home-post', (req, res) => {
 
 
 // Use our  exported  router - things
-app.use('/things', things);
+// app.use('/things', things);
 
 
 // connect
@@ -60,6 +62,11 @@ app.use('/things', things);
 
 app.listen(8080,() => {
     console.log('Our app is listening at http://localhost:8080...');
+
+})
+
+app.get('/H', (req, res) => {
+    
 
 })
 
