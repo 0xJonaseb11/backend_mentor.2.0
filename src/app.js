@@ -33,7 +33,7 @@ class Person extends EventEmitter {
 }
 
 let pedro = new Person("Pedro");
-let jaz = new Person("az");
+let jaz = new Person("jaz");
 jaz.on("name", () => {
   console.log("His name is " + jaz.name);
 });
