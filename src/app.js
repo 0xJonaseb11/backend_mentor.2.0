@@ -231,7 +231,7 @@ const writeStream = fs.createWriteStream("test2.txt");
 /**listen for events */
 readStream.on("data", (chunk) => {
   setTimeout(() => {
-    console.log(chunk); //chunk makes it easy it easy to immediately manipulate it
+    console.log(chunk); //chunk makes it easy to immediately manipulate it
     /**writable stream  */
     writeStream.write(chunk);
   }, 7000);

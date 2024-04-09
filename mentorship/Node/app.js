@@ -1,6 +1,7 @@
-// fs
-const { error } = require("console");
+// modules should be declared at the very top
+// const { error } = require("console");
 const fs = require("fs");
+const zlib = require("zlib");
 
 // creating a file
 fs.writeFile(
@@ -82,21 +83,6 @@ fs.mkdir("./aime/ourApp.html", (error) => {
   }
 });
 
-// const names = {
-//     "name": "jonas",
-//     "id" : 234
-// }
-
-// if (names in names) {
-//     console.log("Found it")
-// }
-
-// // of
-
-// if (let name of names) {
-//     console.log("it is probably there")
-// }
-
 // read directory
 fs.readdir("./aime", (error, files) => {
   if (error) {
@@ -138,3 +124,24 @@ fs.readdir("./aime", (error, files) => {
 });
 
 // READABLE AND WRITABLE STREAMS
+// create stream
+const my_readStream = fs.createReadStream("./aime.txt", "utf-8");
+const my_writeStream = fs.createWriteStream("./aime1.txt");
+// console.log(my_writeStream)
+
+const zipped = zlib.createGzip("./compressed.zip", "utf-8"); // zipped file
+const unzipped = zlib.createGunzip("compressed.txt", "utf-8"); // unzip file
+
+// console.log(zipped, unzipped)
+
+my_readStream.pipe(zipped).pipe(my_writeStream);
+my_readStream.pipe(unzipped).pipe(my_writeStream);
+
+// console.log(readStream, writeStream);
+
+my_readStream.on("data", (chunk) => {
+  setTimeout(() => {
+    // console.log(chunk)
+    my_readStream.write(chunk);
+  }, 5000);
+});
