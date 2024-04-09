@@ -1,6 +1,6 @@
 //NOTE : it is of high standard to put the used modules in one same position
 
- const tut = require('./tutorial');
+ const tut = require('./trial');
 console.log(tut); 
  /****Prints the properties of tutorial ***/
 
@@ -105,7 +105,7 @@ console.log(tut);
   });
 
   //Reading a file
-fs.readFile('overlap.txt','utf-8',(err,data) =>{
+fs.readFile('overlap.txt','utf-8',(err,data) => {
   if(err){
     console.error('ERROR OCCURRED',err);
   }
@@ -154,7 +154,7 @@ fs.unlink('test.txt',(err) =>{
 
 /****making/creating directory with: mkdir*/
 /***writing/creating file with: writeFile*/
-fs.mkdir('./tutorial/test.txt',(err) =>{
+fs.mkdir('./test/test.txt',(err) =>{
   if(err){
     console.log(err);
   }

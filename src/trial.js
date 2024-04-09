@@ -1,10 +1,7 @@
-const tutorial = require("./tutorial");
+const trial = require("./trial");
 const EventEmitter = require("events");
 const readline = require("readline");
 const fs = require("fs");
-const { error } = require("console");
-const { concat, chunk } = require("lodash");
-const { isUtf8 } = require("buffer");
 const zlib = require("zlib");
 const http = require("http");
 const lodash = require("lodash");
@@ -14,17 +11,17 @@ const bodyParser = require("body-parser");
 const joi = require("joi");
 const trial_app = express();
 
-console.log(tutorial);
-console.log(tutorial.sum(9, 9));
-console.log(tutorial.PI);
-console.log(new tutorial.SomeMathObj());
+console.log(trial);
+console.log(trial.sum(9, 9));
+console.log(trial.PI);
+console.log(new trial.SomeMathObj());
 
 const eventEmitter = new EventEmitter();
-eventEmitter.on("tutorial", (num1, num2) => {
+eventEmitter.on("trial", (num1, num2) => {
   console.log("Tutorial event triggered!!\n");
 });
 
-eventEmitter.emit("tutorial", 12, 20);
+eventEmitter.emit("trial", 12, 20);
 
 class Person extends EventEmitter {
   constructor() {
