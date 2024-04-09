@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="JavaScript "></script>
+</head>
+<body>
+
+    <script>
+        // fs 
+const { error } = require('console');
+const fs = require('fs');
+
+// creating a file
+fs.writeFile("app.pdf", "Hello from jonas, this is nodejs course so blooooooooooooooooooooo",(error) => {
+    if (error) {
+        console.log("Error occurred while creating file", error)
+    } else {
+        console.log("app.txt file created successfully");
+    }
+});
+
+// read the content of our file
+fs.readFile("app.pdf", 'utf-8', (error, data) => {
+    if (error) {
+        console.log("An error occurred while reading file", error);
+    } else {
+        console.log(data);
+    }
+});
+
+// deleting a file
+fs.unlink("app.pdf", (error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("app.pdf file deleted successfully");
+    }
+});
+
+// renaming a file
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
