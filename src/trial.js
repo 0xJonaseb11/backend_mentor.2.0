@@ -236,6 +236,10 @@ trial_app.get("/example/:name/:age", (req, res) => {
   res.send(req.params.name + ":" + req.params.age);
 });
 
+/////////////////////////////////////////////
+///////////  RESUME HERE ///////////////////
+///////////////////////////////////////////
+
 //Serving static files with express
 trial_app.use("/public", express.static(path.join(__dirname, "static")));
 trial_app.get("/", (req, res) => {
@@ -309,7 +313,7 @@ trial_app.use("/validation", (req, res) => {
 
 //Middleware
 //refers to the code that is executed btn the user and the server itself
-trial_app.use(bodyParser.json);
+trial_app.use(bodyParser.json());
 trial_app.use("/example", (req, res, next) => {
   console.log(req.url, req.method);
   next();
@@ -326,4 +330,3 @@ trial_app.use((req, res, next) => {
 const pple = require("../routes/pple");
 trial_app.use("./pple", pple);
 trial_app.listen(6000);
-

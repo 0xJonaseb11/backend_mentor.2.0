@@ -14,7 +14,7 @@ let users = [
         id: 1,
         name: "jonas",
         age: 23,
-        email: "jonas@gmail.com
+        email: "jonas@gmail.com"
     }
 ];
 

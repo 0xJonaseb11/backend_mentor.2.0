@@ -1,7 +1,10 @@
 // modules should be declared at the very top
 // const { error } = require("console");
+const express = require('express');
 const fs = require("fs");
 const zlib = require("zlib");
+const path = require('path');
+const app = express();
 
 // creating a file
 fs.writeFile(
@@ -144,4 +147,11 @@ my_readStream.on("data", (chunk) => {
     // console.log(chunk)
     my_readStream.write(chunk);
   }, 5000);
+});
+
+
+// SERVING STATIC FILES
+app.use('/public', express.static(path.join(__dirname, 'static')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, "static", 'form.html'));
 });
