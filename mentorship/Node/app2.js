@@ -2,7 +2,6 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path')
 const joi = require('joi');
-const { error } = require('console');
 
 const app = express();
 
@@ -28,7 +27,7 @@ app.post('/', (req, res) => {
     res.json({ success: true});
 })
 
-// USER INPUT VALIDATION
+// USER INPUT VALIDATION 
 const schema = joi.object.keys({
     email: joi.string().trim().email().required(),
     password: joi.string().max(20).min(6).required()

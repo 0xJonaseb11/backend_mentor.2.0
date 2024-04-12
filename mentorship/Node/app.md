@@ -1,1 +1,0 @@
-Yooooo, this is the finished version of frontend. i will give you more later Mehnn please don't forget to install the dependencies. use ```sh npm install --save express dontenv axios http```
