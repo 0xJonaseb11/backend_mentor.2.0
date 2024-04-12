@@ -65,11 +65,6 @@ app.listen(8080,() => {
 
 })
 
-app.get('/H', (req, res) => {
-    
-
-})
-
 // app.use()
 
 
