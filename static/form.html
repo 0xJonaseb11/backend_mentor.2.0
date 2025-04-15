@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>FORM</title>
+
+</head>
+<body bgcolor="lightblue">
+    <h2>Student Registration Form</h2><br>
+
+<div> <br>
+    <form action="/" method="POST" id="form" autocomplete="on">
+        <label for="fname"> Firstname</label>
+        <input type="text" name="firstname" id="fname" placeholder="First name" required >
+    </div>
+    <div><br>
+    <label for="lname"> lastname</label>
+    <input type="text" name="lastname" id="lname" placeholder="Last name" required>
+    </div>
+<div><br>
+    <label for="age">DOB</label>
+    <input type="date" name="age" id="age" required>
+</div>      
+<div><br>
+    <label for="fschool">Former School</label>
+    <input type="text" name="formerschool" id="fschool" placeholder="Former School" required>
+</div>
+
+<div><br>
+<label for="e-mail">E-mail</label>
+<input type="e-mail" name="e-mail" id="email" placeholder="Email address" required>
+</div>
+
+<div><br>
+
+    <label for="gender" required>Gender</label>
+    <input type="radio" name="gender" value="female" id="female">Female
+    <input type="radio" name="gender" value="male" id="male">Male
+
+    </div>
+
+    
+    <div><br><label for="games">Games</label>
+            <div> <input type="checkbox" name="football"  id="foot">football</div>
+            <label for="volleyball"></label>
+            <div><input type="checkbox" name="volleyball" id="volley">volleyball</div>
+            <label for="basketball"></label>
+            <div><input type="checkbox" name="basketball" id="basket">basketball</div>
+            <label for="handball"></label>
+            <div><input type="checkbox" name="rugby" id="rugby">handball</div>
+
+    </div>
+</div>
+    <div> <br> 
+        <label for="district">District</label>
+        <select name="district"  id="district" required>
+            <option value="">select a district</option>
+            <option value="bugesera">Bugesera</option>
+            <option value="gasabo">Gasabo</option>
+            <option value="nyanza">Nyanza</option>
+            <option value="nyabihu">Nyabihu</option>
+            <option value="gisagara">Gisagara</option>
+            <option value="Gatsibo">Gatsibo</option>
+    </select>
+    
+    <div><br>
+        <label for="moredetails">Why did you choose RCA</label><br>
+        <textarea cols="60" rows="5" name="moredetails" id="details" placeholder="Please  tell us why you chose RCA" required></textarea>
+        
+    </div>
+<div><br>
+    
+    <input type="submit" name="register" id="register" value="register">
+</div><br>
+<div>
+
+<input type="reset" name="clear" id="clear" value="clear">
+</div><br>
+
+<div><label for="Choose file
+    file"></label>
+    <input type="file" name="file" id="file" value="Choose file" placeholder="Choose file">
+
+</div>
+            
+
+
+
+    </form>
+    <script>
+        $(document).ready(() =>{
+            $('#form').submit((e) =>{
+                e.preventDefault();
+                $.ajax({
+                    url :'/',
+                    type :'post',
+                    contentType :'application',
+                    data: JSON.stringify($('form').serializeArray()),
+                    success : (response) =>{
+                        console.log('successfully gotten response');
+                        console.log(response);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
