@@ -1,0 +1,14 @@
+{
+  "name": "holiday-mentorship",
+  "version": "1.0.0",
+  "description": "Holiday advanced js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Etienne",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
